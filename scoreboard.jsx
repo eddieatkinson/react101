@@ -16,10 +16,10 @@ function Header(props){
 function Team(props){
 	return(
 		<div className="team">
-			<div className="team-name">Columbus</div>
+			<div className="team-name">{props.name}</div>
 			<div className="counter">
 				<button className="minus">-</button>
-				<div className="team-score">0</div>
+				<div className="team-score">{props.score}</div>
 				<button className="plus">+</button>
 			</div>
 		</div>
@@ -31,15 +31,8 @@ function Application(props){
 		<div className="scoreboard">
 			<Header title={props.title} />
 			<div className="teams">
-				
-				<div className="team">
-					<div className="team-name">Toronto</div>
-					<div className="counter">
-						<button className="minus">-</button>
-						<div className="team-score">0</div>
-						<button className="plus">+</button>
-					</div>
-				</div>
+				<Team name="Columbus" score="0" />
+				<Team name="Toronto" score="0" />
 			</div>
 		</div>
 	);
